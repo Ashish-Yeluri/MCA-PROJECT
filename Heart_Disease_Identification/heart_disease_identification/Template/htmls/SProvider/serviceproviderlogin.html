@@ -1,0 +1,110 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<title>Login</title>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<head>
+
+<link rel="icon" href="images/icon.png" type="image/x-icon" />
+
+	<!--<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Finger+Paint&family=Mountains+of+Christmas:wght@400;700&family=Neonderthaw&family=Rubik+Gemstones&display=swap" rel="stylesheet">
+
+
+
+		<style>
+			body {
+				background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
+				/*background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);*/
+			  }
+			/*body {background-color:#84bbe7;}*/
+			.container-fluid {padding:50px;}
+			.container{/*background-color:#84bbe7;*/padding:50px;   }
+			#title{font-family: 'Neonderthaw', static;
+}
+			.text-uppercase{
+			font-family: 'Righteous', cursive;
+
+			}
+		.style1 {
+	color: #070101;
+	font-weight: bold;
+}
+        .style2 {
+	font-family: 'Righteous', cursive;
+	color: #100101;
+	font-weight: bold;
+}
+.style3 {
+	font-family: 'Righteous', cursive;
+	color: #0c0101;
+	font-weight: bold;
+}
+         .form 
+		 {background-color: "";
+		 margin: 0;
+		 border: 1px solid rgb(6, 0, 0);
+		 padding: 10px;
+		 width:fit-content;
+		 height:fit-content;
+		 border-radius: 15px;
+		 text-align:default;
+		}
+        </style>
+	</head>
+	<body>
+	<div class="container-fluid">
+		<div class="container">
+			<h2 class="text-center style1" id="title">Heart Disease Identification Method Using Machine Learning Classification in E-Healthcare</h2>
+			 <p class="text-center">
+				<span class="style3"><small id="passwordHelpInline" class="text">Heart disease classification, features selection, disease diagnosis, intelligent system,medical data analytics. </small></span> </p>
+ 			<hr>
+			<div class="row">
+
+
+				<div class="col-md-0">
+					<!-------null------>
+				</div>
+
+				<div class="col-md-0">
+ 				 		<form method="POST" role="form">
+							{% csrf_token %}
+
+							<fieldset class="form">
+							<p class="style2"> Login Service Provider: </p>
+
+							<div class="form-group">
+								<input type="text" name="username"  class="form-control input-lg" placeholder="User Name" required>
+							</div>
+							<div class="form-group">
+								<input type="password" name="password"  class="form-control input-lg" placeholder="Password" required>
+							</div>
+							<div>
+								<input type="submit" name="submit1"  class="btn btn-md" value="Login">
+							</div>
+ 						
+						<br><br>
+						<button class="btn btn-md "><a href="{% url 'login' %}">User Login</a></button> 
+					</fieldset>
+				</form>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	</body>
+
+
+</html>

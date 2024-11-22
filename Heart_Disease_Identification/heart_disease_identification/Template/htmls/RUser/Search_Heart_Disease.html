@@ -1,0 +1,120 @@
+{% extends 'RUser/design.html' %}
+{% block userblock %}
+
+<link rel="icon" href="images/icon.png" type="image/x-icon" />
+
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+
+
+
+		<style>
+			body {background-color:#000000;}
+			.container-fluid {padding:50px;}
+			.container{background-image: url("https://img.freepik.com/free-vector/medical-science-healthcare-background-with-heartbeat-line_1017-26361.jpg?t=st=1710433983~exp=1710437583~hmac=2bf7781832519d2e36de00051fec21fdf376881bcbaffb5c65811ada73f28967&w=1060");
+      background-position: center;
+      background-size: cover;
+      /*background-color:white;*/padding:50px;   }
+			#title{font-family: 'Fredoka One',static;
+}
+			.text-uppercase{
+			font-family: 'Righteous',static;
+
+			}
+			/*.tweettext{
+    border: 2px solid yellowgreen;
+    width: 1104px;
+    height: 442px;
+    overflow: scroll;
+    background-color:;}*/
+		.style1 {
+	color: #fcfdfd;
+	font-weight:bold;
+  font-style:italic;
+}
+        .style2 {color: #0c93e7}
+        .style3 {color: #0c0101}
+        .style8 {color: rgb(1, 6, 10);font-size:large;}
+        .style9 {color: #fafbfc;
+        font-weight: bold;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
+        </style>
+
+	<body>
+	<div class="container-fluid">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-md-5">
+				
+				<form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+							<p class="text-uppercase pull-center style1"><marquee behavior="alternate">SEARCH  HEART  DISEASE  DETAILS (Enter name or Keyword as Abnormal)!!!</marquee> </p>
+                            <hr>
+
+                                {% csrf_token %}
+                                <table width="568" align="">
+                                  <tr>
+                                    <td width="250" height="44"<div align=""><span class="style9">Enter Username Name or Keyword Here :</span></div></td>
+                                    <td width="39"><input type="text" name="keyword" ></td>
+                                  </tr>
+  <td><p>&nbsp; </p>
+          <p>
+           <!--<input name="submit" type="submit" class="style1" value="Search">-->
+            <input type="submit" name="submit1"  class="btn btn-sm btn-primary" value="Search">
+        </p></td>
+  </tr>
+                                </table>
+						 </fieldset>
+				  </form>
+
+
+                     <table border="1" bordercolor=#fbf9f9; style8>
+                          <tr><td bgcolor="#95cef7"><span class="style8">Patient Name</span></td>
+                          <td bgcolor="#95cef7"><span class="style8">Age</span></td>
+                          <td bgcolor="#95cef7"><span class="style8">Sex</span></td>
+                          <td bgcolor="#95cef7"><span class="style8">Chest Pain</span></td>
+                          <td bgcolor="#95cef7"><span class="style8">Resting Blood Pressure()</span></td>
+                          <td bgcolor="#95cef7"><span class="style8">Cholesterol</span></td>
+                          <td bgcolor="#95cef7"><span class="style8">Fasting Blood Sugar</span></td>
+                          <td bgcolor="#95cef7"><span class="style8">Resting Electro Cardiographic</span></td>
+                          <td bgcolor="#95cef7"><span class="style8">Max Heart Rate</span></td>
+                          <td bgcolor="#95cef7"><span class="style8">Exercise Induced Angina</span></td>
+                          <td bgcolor="#95cef7"><span class="style8">Depression Induced by Exercise</span></td>
+                          <td bgcolor="#95cef7"><span class="style8">Fluoroscopy</span></td>
+                          <td bgcolor="#95cef7"><span class="style8">Thallium Scan</span></td>
+
+
+                      </tr>
+
+                            {% for object in objs %}
+                      <tr>
+                                        <td style="color:rgb(238, 69, 145); font-size:20px; font-family:cursive"><div align="center">{{object.names}}</div></td>
+                                        <td style="color:rgb(238, 69, 145); font-size:20px; font-family:cursive"><div align="center">{{object.age}}</div></td>
+                                        <td style="color:rgb(238, 69, 145); font-size:20px; font-family:cursive"><div align="center">{{object.sex}}</div></td>
+                                        <td style="color:rgb(238, 69, 145); font-size:20px; font-family:cursive"><div align="center">{{object.chest_pain}}</div></td>
+                                        <td style="color:rgb(238, 69, 145); font-size:20px; font-family:cursive"><div align="center">{{object.resting_bp}}mmHg</div></td>
+                                        <td style="color:rgb(238, 69, 145); font-size:20px; font-family:cursive"><div align="center">{{object.serum_cholesterol}}mg/dl</div></td>
+                                        <td style="color:rgb(238, 69, 145); font-size:20px; font-family:cursive"><div align="center">{{object.fasting_blood_sugar}}mg/dl</div></td>
+                                        <td style="color:rgb(238, 69, 145); font-size:20px; font-family:cursive"><div align="center">{{object.resting_electro_cardiographic}}</div></td>
+                                        <td style="color:rgb(238, 69, 145); font-size:20px; font-family:cursive"><div align="center">{{object.max_heart_rate}}beats</div></td>
+                                        <td style="color:rgb(238, 69, 145); font-size:20px; font-family:cursive"><div align="center">{{object.exercise_induced_angina}}</div></td>
+                                        <td style="color:rgb(238, 69, 145); font-size:20px; font-family:cursive"><div align="center">{{object.depression_induced_by_exercise}}</div></td>
+                                        <td style="color:rgb(238, 69, 145); font-size:20px; font-family:cursive"><div align="center">{{object.fluoroscopy}}</div></td>
+                                        <td style="color:rgb(238, 69, 145); font-size:20px; font-family:cursive"><div align="center">{{object.thallium_scan}}</div></td>
+                     </tr>
+
+                                        {% endfor %}
+                      </table>
+				</div>
+
+				<div class="col-md-2">
+					<!-------null------>
+				</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+    <tr>

@@ -1,0 +1,76 @@
+{% extends 'SProvider/design1.html' %}
+{% block researchblock %}
+
+<link rel="icon" href="images/icon.png" type="image/x-icon" />
+
+<!--<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Almendra:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">-->
+
+
+		<style>
+			body {background-color:#000000;}
+			.container-fluid {padding:0;}
+
+			.text-uppercase{
+			font-family: 'Festive', Static;
+
+			}
+			input{
+			font-family:'Festive', Static;
+			font-size:15px;
+			}
+
+   .head{
+   margin-left: 250px;
+   margin-right: 100px;
+}
+			.style2{font-family: cursive;}
+
+        </style>
+
+	<body>
+	<div class="container-fluid">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-md-5">
+ 					<form role="form" method="POST" >
+						{% csrf_token %}
+						<!--<fieldset>-->
+							<p class="text-uppercase pull-center style2"><marquee behavior="alternate">VIEW ALL REMOTE USERS !!! </marquee></p>
+                            <div class="viewclients">
+								<div class="head">
+								<table border="2" bordercolor="#000000" id="head">
+								<tr>
+									<th bgcolor="#008080" style="color:rgb(9, 9, 1)">USER NAME</th>
+									<th bgcolor="#008080" style="color:rgb(17, 17, 1)">EMAIL</th>
+									<th bgcolor="#008080" style="color:rgb(13, 13, 1)">Mob No</th>
+									<th bgcolor="#008080" style="color:rgb(7, 7, 1)">Country</th>
+									<th bgcolor="#008080" style="color:rgb(11, 11, 1)">State</th>
+									<th bgcolor="#008080" style="color:rgb(5, 5, 0)">City</th>
+								</tr>
+								<tr>
+								{% for o in objects %}
+									<td style="color:#000000; font-family:cursive">{{o.username}}</td>
+									<td style="color:#000000; font-family:cursive">{{o.email}}</td>
+									<td style="color:#000000; font-family:cursive">{{o.phoneno}}</td>
+									<td style="color:#000000; font-family:cursive">{{o.country}}</td>
+									<td style="color:#000000; font-family:cursive">{{o.state}}</td>
+									<td style="color:#000000; font-family:cursive">{{o.city}}</td>
+								</tr>
+								{% endfor %}
+							</table>
+
+						</div>
+					  </fieldset>
+					</form>
+				</div>
+
+				<div class="col-md-2">
+					<!-------null------>
+				</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

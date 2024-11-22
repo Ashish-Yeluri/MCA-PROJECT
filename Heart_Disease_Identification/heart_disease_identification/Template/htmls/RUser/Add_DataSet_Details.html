@@ -1,0 +1,125 @@
+{% extends 'RUser/design.html' %}
+{% block userblock %}
+
+
+<link rel="icon" href="images/icon.png" type="image/x-icon" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jim+Nightshade&display=swap" rel="stylesheet">
+
+<!--<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">-->
+
+
+
+		<style>
+			body {background-image: url("https://img.freepik.com/free-vector/medical-healthcare-background-with-text-space_1017-26841.jpg?t=st=1710430412~exp=1710434012~hmac=471ffef0d2555ce8e33dd1c23148ed24c3ec892a931065761d0d4b76749e5a0e&w=900");
+                /*background-color:#FFFFFF;*/}
+			.container-fluid {padding:50px;}
+			.container{background-image: url("https://img.freepik.com/free-vector/medical-healthcare-background-with-text-space_1017-26841.jpg?t=st=1710430412~exp=1710434012~hmac=471ffef0d2555ce8e33dd1c23148ed24c3ec892a931065761d0d4b76749e5a0e&w=900");
+                background-position: center;
+                background-size: cover;
+            /*background-color:rgb(61, 223, 223);*/padding:50px;}
+			#title{font-family: 'Jim Nightshade', cursive;
+}
+			.text-uppercase{
+			font-family: 'Jim Nightshade', cursive;
+
+			}
+			input,textarea{
+			font-family:italic;
+			font-size:15px;
+			}
+            .tweettext{
+                padding-left:0px;
+                border: 2px solid  #FFFFFF;
+                width: 1254px;
+                height: 300px;
+                overflow: scroll;
+                /*background-color:#808000;*/
+            }
+		.style1 {
+	color: #080a0a;
+	
+    font-weight: cursive;
+}
+.style5 {
+	color: #070707;
+    font-weight: bold;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.style4 {color: hsl(60, 77%, 40%); font-weight: bold; }
+        .style6{color: #e14a4a;  font-style: obliques; }
+        .font{
+            font-family: cursive;
+        }
+        </style>
+
+	<body>
+	<div class="container-fluid">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-md-5">
+ 					<form action="{% url 'Add_DataSet_Details' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}<span class="style5">Browse Heart Disease Data Set</span>
+              <input type="file"
+                   title="Upload excel file"
+                   name="excel_file"
+                   style="border: 1px solid black; padding: 5px;"
+                   required="required">
+            <p>
+            <input type="submit"
+                   value="Upload"
+                   style="border: 1px solid green; padding:5px; border-radius: 2px; cursor: pointer;">
+        </form>
+
+        <p></p>
+
+        <div class="tweettext">
+        <hr><fieldset class="font"><form role="form" method="POST" >
+                    <table border="5" bordercolor="#95cef7">
+                      <tr><td bgcolor="#95cef7"><span class="style5">Patient Name</span></td>
+                      <td bgcolor="#95cef7"><span class="style5">Age</span></td>
+                      <td bgcolor="#95cef7"><span class="style5">Sex</span></td>
+                      <td bgcolor="#95cef7"><span class="style5">Chest Pain</span></td>
+                          <td bgcolor="#95cef7"><span class="style5">Resting Blood Pressure(mmHg)</span></td>
+                          <td bgcolor="#95cef7"><span class="style5">Cholesterol(mg/dl)</span></td>
+                          <td bgcolor="#95cef7"><span class="style5">Fasting Blood Sugar(mg/dl)</span></td>
+                          <td bgcolor="#95cef7"><span class="style5">Resting Electro Cardiographic</span></td>
+                          <td bgcolor="#95cef7"><span class="style5">Max Heart Rate(beats)</span></td>
+                          <td bgcolor="#95cef7"><span class="style5">Exercise Induced Angina</span></td>
+                          <td bgcolor="#95cef7"><span class="style5">Depression Induced by Exercise</span></td>
+                          <td bgcolor="#95cef7"><span class="style5">Fluoroscopy</span></td>
+                          <td bgcolor="#95cef7"><span class="style5">Thallium Scan</span></td>
+
+
+                      </tr>
+
+
+        {% for row in excel_data %}
+<tr>
+            {% for cell in row %}
+                     <td>   {{ cell }}&nbsp;&nbsp&nbsp;&nbsp;
+            {% endfor %}
+
+            <br></td></tr>
+        {% endfor %}
+                  </table>
+
+{{obj}}
+
+						</fieldset>
+					</form>
+				</div>
+                </div>
+
+				<div class="col-md-2">
+					<!-------null------>
+				</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

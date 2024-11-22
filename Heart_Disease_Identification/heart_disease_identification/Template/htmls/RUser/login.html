@@ -1,0 +1,137 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<title>Login</title>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<head>
+
+<link rel="icon" href="images/icon.png" type="image/x-icon" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jim+Nightshade&display=swap" rel="stylesheet">
+
+<!--<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Whisper&display=swap" rel="stylesheet">-->
+
+	<!--<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">-->
+
+
+
+		<style>
+			body {
+				background-image: url("https://img.freepik.com/free-photo/view-anatomic-heart-model-educational-purpose-with-stethoscope_23-2149894525.jpg?t=st=1710349063~exp=1710352663~hmac=aa182b3e5bc679664b8b2ebf89cda9a87457cc0f4d3f2532bda65548b5ad1a66&w=900");
+				  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+			}
+			.container-fluid {padding:50px;}
+			.container{padding:50px; 
+				
+			}
+			#title{font-family: 'Jim Nightshade', cursive;
+}
+			.text-uppercase{
+			font-family: 'Jim Nightshade', cursive;
+
+			}
+
+		.style1 {color: rgb(10, 10, 10);}
+        .style4 {color: #040000; font-weight: bold; }
+        
+		.button1{
+			background-color: rgb(58, 221, 218);
+			color: white;
+			border-radius: 5px;
+			cursor: pointer;
+			width: 80px;
+			height: 40px;
+		}
+		.form 
+		 {background-color: "";
+		 margin: 0;
+		 border: 1px solid silver;
+		 padding: 8px;
+		 width:fit-content;
+		 height:fit-content;
+		 border-radius: 15px;
+		 text-align:default;
+		}
+	</style>
+	</head>
+	<body>
+	<div class="container-fluid">
+		<div class="container">
+			<h2 class="style1 text-center" id="title"><strong>Heart Disease Identification Method Using Machine Learning Classification in E-Healthcare
+</strong></h2>
+			 <p class="text-center">
+				<span class="style4"><small id="passwordHelpInline" class="text">Heart disease classification, features selection, disease diagnosis, intelligent system,medical data analytics.
+ </small></span> </p>
+ 			<hr>
+			<div class="row">
+				<div class="col-md-0">
+ 					<form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+							<p class="text-uppercase pull-center">&nbsp;</p>
+					  </fieldset>
+					</form>
+				</div>
+
+				<div class="col-md-0">
+					<!-------null------>
+				</div>
+
+				<div class="col-md-0">
+ 				 		<form method="POST" role="form">
+							{% csrf_token %}
+
+						<fieldset class="form">
+							<p class="text-uppercase bold"> <!--<marquee behavior="alternate">-->Login Using Your Account:<strong></strong> </p>
+
+							<div class="form-group">
+								<input type="text" name="username"  class="form-control input-lg" placeholder="User Name" required>
+							</div>
+							<div class="form-group">
+								<input type="password" name="password"  class="form-control input-lg" placeholder="Password" required>
+							</div>
+							<div>
+								<input type="submit" name="submit1"  class="btn btn-sm btn-secondary" value="sign_in">
+							</div></br>
+
+							<p class="text-uppercase"> Login Using Your Account: </p>
+
+							<div>
+
+								
+							<button style="margin:5px;" class="btn btn-sm" ><a href="{% url 'serviceproviderlogin' %}">SERVICE PROVIDER</a></button1>
+								
+                                <button class="btn btn-sm"><a href="{% url 'Register1' %}">REGISTER</a></button>
+ 							</div>
+ 						</fieldset>
+				</form>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	</body>
+
+
+</html>

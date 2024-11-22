@@ -1,0 +1,97 @@
+{% extends 'SProvider/design1.html' %}
+{% block researchblock %}
+
+<link rel="icon" href="images/icon.png" type="image/x-icon" />
+
+		<style>
+			body {background-color:#000000;}
+			.container-fluid {padding:0;}
+            .text-uppercase{
+			font-family: 'Righteous', cursive;
+
+			}
+			.tweettext{
+
+    border: 2px solid rgb(45, 205, 184);
+    width: 1104px;
+    height: 442px;
+    overflow: scroll;
+    
+}
+.tweettext{
+
+    border: 2px solid  #FFFFFF;
+    width: 1354px;
+    height: 300px;
+    overflow: scroll;
+    /*background-color:#808000;*/
+}
+.style2 {color: #FFFF00}
+        .style3 {color: #FFFFFF}
+        .style5 {color:bisque;}
+        .style6 {padding:20px;
+        font-style: cursive;
+        font-weight: bold;}
+        .style8 {font-size: large;}
+        .head{
+            margin-left: 300px;}
+        </style>
+
+	<body>
+	<div class="container-fluid">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-md-5">
+                    <div class="head">
+	<p class="text-uppercase pull-center style6">VIEW ABNORMAL USER DETAILS !!! </p></div>
+    <div class="tweettext">
+                    <table border="2" bordercolor="#FFFFFF">
+                      <tr>
+                      <td bgcolor="#008080"><span class="style8">Patient Name</span></td>
+                      <td bgcolor="#008080"><span class="style8">Age</span></td>
+                      <td bgcolor="#008080"><span class="style8">Sex</span></td>
+                      <td bgcolor="#008080"><span class="style8">Chest Pain</span></td>
+                      <td bgcolor="#008080"><span class="style8">Resting Blood Pressure()</span></td>
+                      <td bgcolor="#008080"><span class="style8">Cholesterol</span></td>
+                      <td bgcolor="#008080"><span class="style8">Fasting Blood Sugar</span></td>
+                      <td bgcolor="#008080"><span class="style8">Resting Electro Cardiographic</span></td>
+                      <td bgcolor="#008080"><span class="style8">Max Heart Rate</span></td>
+                      <td bgcolor="#008080"><span class="style8">Exercise Induced Angina</span></td>
+                      <td bgcolor="#008080"><span class="style8">Depression Induced by Exercise</span></td>
+                      <td bgcolor="#008080"><span class="style8">Fluoroscopy</span></td>
+                      <td bgcolor="#008080"><span class="style8">Thallium Scan</span></td>
+
+
+                      </tr>
+
+                            {% for object in objs %}
+                      <tr>
+                                        <td style="font-family:cursive; color:#00FFFF; font-size:19px;" ><div align="center">{{object.names}}</div></td>
+                                        <td style="font-family:cursive; color:#000000; font-size:19px; "><div align="center">{{object.age}}</div></td>
+                                        <td style="font-family:cursive; color:#000000; font-size:19px; "><div align="center">{{object.sex}}</div></td>
+                                        <td style="font-family:cursive; color:#000000; font-size:19px; "><div align="center">{{object.chest_pain}}</div></td>
+                                        <td style="font-family:cursive; color:#000000; font-size:19px; "><div align="center">{{object.resting_bp}}mmHg</div></td>
+                                        <td style="font-family:cursive; color:#000000; font-size:19px; "><div align="center">{{object.serum_cholesterol}}mg/dl</div></td>
+                                        <td style="font-family:cursive; color:#000000; font-size:19px; "><div align="center">{{object.fasting_blood_sugar}}mg/dl</div></td>
+                                        <td style="font-family:cursive; color:#000000; font-size:19px; "><div align="center">{{object.resting_electro_cardiographic}}</div></td>
+                                        <td style="font-family:cursive; color:#C0C0C0; font-size:19px; "><div align="center">{{object.max_heart_rate}}beats</div></td>
+                                        <td style="font-family:cursive; color:#C0C0C0; font-size:19px; "><div align="center">{{object.exercise_induced_angina}}</div></td>
+                                        <td style="font-family:cursive; color:#C0C0C0; font-size:19px; "><div align="center">{{object.depression_induced_by_exercise}}</div></td>
+                                        <td style="font-family:cursive; color:#C0C0C0; font-size:19px; "><div align="center">{{object.fluoroscopy}}</div></td>
+                                        <td style="font-family:cursive; color:#C0C0C0; font-size:19px; "><div align="center">{{object.thallium_scan}}</div></td>
+                     </tr>
+
+                                        {% endfor %}
+                      </table>
+
+				</div>
+
+				<div class="col-md-2">
+					<!-------null------>
+				</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+    <tr>

@@ -1,0 +1,140 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<title>Register Your Details</title>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	    <style type="text/css">
+<!--
+.style1 {
+	color: hsl(294, 78%, 51%);
+	font-weight: bold;
+}
+.style2 {
+	color: black;
+	font-style: normal ;
+}
+-->
+        </style>
+	    <head>
+
+			<link rel="preconnect" href="https://fonts.googleapis.com">
+			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+			<link href="https://fonts.googleapis.com/css2?family=Jim+Nightshade&display=swap" rel="stylesheet">
+
+
+		<style>
+			body {background-image: url("https://img.freepik.com/free-vector/medical-background-with-cardiograph-heart-beat-lines_1017-31185.jpg?t=st=1710429230~exp=1710432830~hmac=ecd601f21063aac5e8ac82c00d93c92d57dc5708d7c17af1afe53a34c036edba&w=1060");
+			/* Full height */
+height: 100%;
+
+/* Center and scale the image nicely */
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+			}
+			.container-fluid {padding:50px;}
+			.container{
+			background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+			/* Full height */
+				
+				/*background-color:white;padding:50px;   }*/
+			#title{font-family: 'Jim Nightshade', cursive;
+}
+			.text-uppercase{
+			font-family: 'Jim Nightshade', cursive;
+
+			}
+			.button1{
+				background-color: rgb(0, 255, 153);
+				color: white;
+				border-radius: 5px;
+				cursor: pointer;
+				width: 80px;
+				height: 40p;
+			}
+
+			.form 
+		 {background-color: "";
+		 margin: 0;
+		 border: 1px solid silver;
+		 padding: 15px;
+		 width:fit-content;
+		 height:fit-content;
+		 border-radius: 20px;
+		 text-align:default;
+		}
+        </style>
+	</head>
+	<body>
+	<div class="container-fluid">
+		<div class="container">
+			<h2 class="text-center style1" id="title">Heart Disease Identification Method Using Machine Learning Classification in E-Healthcare
+</h2>
+			 <p class="text-center">
+				<span class="style1"><small id="passwordHelpInline" class="text-muted">Heart disease classification, features selection, disease diagnosis, intelligent system,medical data analytics.</small></span> </p>
+ 			<hr>
+			<div class="row">
+				<div class="col-md-0">
+ 					<form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset class="form">
+							<p class="style2"> REGISTER YOUR DETAILS HERE !!! </p>
+ 							<div class="form-group">
+								<input type="text" name="username" id="username" class="form-control input-lg" placeholder="User Name" required>
+							</div>
+
+							<div class="form-group">
+								<input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address" required>
+							</div>
+							<div class="form-group">
+								<input type="password" name="password" id="password" class="form-control input-lg" placeholder="Password" required>
+							</div>
+								<div class="form-group">
+								<input type="number" name="phoneno" id="phoneno" class="form-control input-lg" placeholder="Mobile Number" required>
+							</div>
+							<div class="form-group">
+								<input type="text" name="country" id="country" class="form-control input-lg" placeholder="Country" required>
+							</div>
+							<div class="form-group">
+								<input type="text" name="state" id="state" class="form-control input-lg" placeholder="State" required>
+							</div>
+							<div class="form-group">
+								<input type="text" name="city" id="city" class="form-control input-lg" placeholder="City" required>
+							</div>
+
+
+						<div class="form-check">
+						  <label class="form-check-label"></label>
+						</div>
+ 							<div>
+							<!--</div class="button1">-->
+ 									  <input type="submit" name="submit" class="btn btn-sm btn-secondary" value="sign_up" >
+									   <button2 class="btn btn-sm btn-secondary"><a href="{% url 'login' %}">User Login</a></button2>
+									   <!--<input type="submit" name="submit" class="btn btn-sm btn-secondary" value="User Login" >-->
+					                   <!--<button class="btn btn-sm  btn-secondary"><a href="{% url 'login' %}">User Login</a></button>-->
+                           </div>
+					    </fieldset>
+					</form>
+				</div>
+
+				<div class="col-md-2">
+					<!-------null------>
+				</div>
+
+				<div class="col-md-5">				</div>
+			</div>
+		</div>
+
+	</div>
+	</body>
+</html>

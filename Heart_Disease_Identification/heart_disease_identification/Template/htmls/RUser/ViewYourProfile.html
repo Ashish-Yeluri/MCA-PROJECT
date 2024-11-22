@@ -1,0 +1,83 @@
+{% extends 'RUser/design.html' %}
+{% block userblock %}
+
+<link rel="icon" href="images/icon.png" type="image/x-icon" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
+
+		<style>
+			body {/*background-color:#000000;*/
+			background-image: url("https://img.freepik.com/free-vector/shiny-cardiograph-health-care-background-design_1017-50524.jpg?t=st=1710432819~exp=1710436419~hmac=c05702915cae8c211171c2ea6cc6c66d4e6e518b5ad4c48917f3649853584d59&w=1060");}
+			.container-fluid {padding:50px;}
+			.container{background-image: url("https://img.freepik.com/free-vector/shiny-cardiograph-health-care-background-design_1017-50524.jpg?t=st=1710432819~exp=1710436419~hmac=c05702915cae8c211171c2ea6cc6c66d4e6e518b5ad4c48917f3649853584d59&w=1060");
+			background-position: center;
+            background-size: cover; 
+			/*background-color:white;*/padding:50px;   }
+			#title{font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+			.text-uppercase{
+			font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+			}
+		.style1 {
+	color: #faf7f7;
+	font-weight: bold;
+}
+.style5 {
+	color: #66b9f5;
+	font-family: cursive;
+}
+.form-group{
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+        </style>
+
+	<body>
+	<div class="container-fluid">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-md-5">
+ 					<form role="form" method="POST" >
+						{% csrf_token %}
+						<fieldset>
+							<p class="text-uppercase pull-center style1"><marquee behavior="alternate">YOUR PROFILE DETAILS !!!</marquee> </p>
+                            <hr>
+ 							<div class="form-group">
+                                <P><span class="style1">USER NAME=</span> <span class="style5">{{object.username}}</span></P>
+                            
+                                <P><span class="style1">EMAIL=</span>  <span class="style5">{{object.email}}</span></P>
+                            
+                                <P><span class="style1">PASSWORD =</span>  <span class="style5">{{object.password}}</span></P>
+							
+                                <p><span class="style1">MOBILE NO =</span> <span class="style5">{{object.phoneno}}</span> </p>
+
+							
+                                <p><span class="style1">COUNTRY =</span> <span class="style5">{{object.country}}</span></p>
+
+							
+                                <p><span class="style1">STATE =</span> <span class="style5">{{object.state}}</span> </p>
+
+							
+                                <p><span class="style1">CITY =</span>  <span class="style5">{{object.city}}</span></p>
+
+							</div>
+
+
+
+
+						</fieldset>
+					</form>
+				</div>
+
+				<div class="col-md-2">
+					<!-------null------>
+				</div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

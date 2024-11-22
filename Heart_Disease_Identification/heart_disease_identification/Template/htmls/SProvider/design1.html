@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Service Provider</title>
+<!--<link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Finger+Paint&family=Mountains+of+Christmas:wght@400;700&family=Neonderthaw&family=Rubik+Gemstones&display=swap" rel="stylesheet">
+
+
+<style>
+    body{background-image: url("https://img.freepik.com/free-photo/top-view-stethoscope-with-tablets-table_23-2148431456.jpg?t=st=1710516810~exp=1710520410~hmac=a902be6779e6f20e7eaca6595430bcf955fb4bec28a88d82490cd40a75451e20&w=900");
+	background-size:cover;}
+	#title{font-family: 'Neonderthaw', static;
+  margin-left: 60px;
+    }
+    h1{
+    color:rgb(7, 7, 7);
+    }
+.topnav {
+  overflow: hidden;
+  background-color: rgb(216, 59, 159);
+}
+
+.topnav a {
+  float: left;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #8e4fd1;
+  color: white;
+}
+.style1 {color: #0a0000}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
+<body>
+  <div class="container-fluid">
+		<div class="container">
+      <div class="box">
+			<h1 class="text-center style1" id="title"><strong>Heart Disease Identification Method Using Machine Learning Classification in E-Healthcare</strong></h1></div>
+    <div  class="topnav">
+
+  <td><a  href="{% url 'View_HeartDiseaseDataSets_Details' %}">View All Heart Disease Data Set Details</a></td>
+    <a href="{% url 'Search_HeartDisease' %}">Search Heart Disease Data Set Details </a>
+    <a href="{% url 'Diagnose_Heart_Disease' %}">Diagnose and Identify Heart Disease </a>
+  <td>  <a href="{% url 'View_Remote_Users' %}">View All Remote Users</a></td>
+    <a href="{% url 'Normal_Users' %}">Diagnose and Identify Normal User </a>
+    <a href="{% url 'Abnormal_Users' %}">Diagnose and Identify AbNormal User</a>
+    <td><a href="{% url 'charts' 'line' %}">View Cholestrol Results</a></td>
+    <td><a href="{% url 'likeschart' 'bar' %}">View Heart Beat Results</a></td>
+
+
+  <td><a href="{% url 'login'  %}">Logout</a></td>
+</div>
+
+
+
+<div class="mainholder">
+{% block researchblock %}
+{% endblock %}
+</div>
+</body>
+</html>
